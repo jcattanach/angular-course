@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: angulartest.example.com
+  labels:
+    app: angulartest
+spec:
+  containers:
+    - name: angulartest
+      image: jcattanach/angular-test
+      ports:
+       - containerPort: 4200
+    

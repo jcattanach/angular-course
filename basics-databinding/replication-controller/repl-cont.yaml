@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: angulartest-controller
+spec:
+  replicas: 2
+  selector:
+    app: angulartest
+  template:
+    metadata:
+      labels:
+        app: angulartest
+    spec:
+      containers:
+        - name: angulartest
+          image: jcattanach/angular-test
+          ports:
+           - name: nodejs-port
+             containerPort: 4200
